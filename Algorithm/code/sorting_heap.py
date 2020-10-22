@@ -2,29 +2,6 @@ import random
 import time
 
 
-def _quick_sort(start, end, arr):
-    if start >= end:
-        return
-
-    pivot = start
-    ldx = start + 1
-    rdx = end - 1
-
-    while ldx <= rdx:
-        while ldx < end and arr[ldx] <= arr[pivot]:
-            ldx += 1
-        while rdx > start and arr[rdx] >= arr[pivot]:
-            rdx -= 1
-
-        if ldx < rdx:
-            arr[ldx], arr[rdx] = arr[rdx], arr[ldx]
-        else:
-            arr[pivot], arr[rdx] = arr[rdx], arr[pivot]
-
-    _quick_sort(start, rdx, arr)
-    _quick_sort(rdx+1, end, arr)
-
-
 def heap_sort(arr):
     # construct max heap
     n = len(arr)
