@@ -2,6 +2,10 @@
 
 ## [Algorithm](./Algorithm/README.md)
 1. 정렬
+2. 스택과 큐(Stack and Queue)
+3. 그래프 탐색하기 (BFS와 DFS)
+4. 그래프 관련 알고리즘
+5. 트리 탐색하기 (트리 순회)
 
 
 ## [Java](./Java/README.md)
