@@ -1,9 +1,8 @@
 package Algorithm.Sort;
 
 public class BubbleSort extends Sort{
+    @Override
     public void sort() {
-        long startTime = System.nanoTime();
-
         int sizeOfNumbers = numbers.length;
 
         for (int i = 0; i < sizeOfNumbers; i++) {
@@ -16,10 +15,5 @@ public class BubbleSort extends Sort{
                 }
             }
         }
-
-        long endTime = System.nanoTime();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
-
     }
 }

@@ -1,8 +1,8 @@
 package Algorithm.Sort;
 
 public class SelectionSort extends Sort {
+    @Override
     public void sort() {
-        long startTime = System.nanoTime();
         int sizeOfNumbers = numbers.length;
 
         for (int i = 0; i < sizeOfNumbers; i++) {
@@ -17,8 +17,5 @@ public class SelectionSort extends Sort {
             numbers[minNumberIndex] = numbers[i];
             numbers[i] = minNumber;
         }
-        long endTime = System.nanoTime();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
     }
 }
