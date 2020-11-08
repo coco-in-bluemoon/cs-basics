@@ -26,5 +26,6 @@ public class Agent {
         sortByAlgorithm(Arrays.copyOf(numbers, numbers.length), new InsertionSort());
         sortByAlgorithm(Arrays.copyOf(numbers, numbers.length), new QuickSort());
         sortByAlgorithm(Arrays.copyOf(numbers, numbers.length), new MergeSort());
+        sortByAlgorithm(Arrays.copyOf(numbers, numbers.length), new HeapSort());
     }
 }
