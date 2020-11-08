@@ -16,31 +16,31 @@ public class MergeSort extends Sort{
 
         int indexLeft = startIndex;
         int indexRight = middleIndex;
-        int indexMerged = 0;
+        int indexBuffer = 0;
 
         while (indexLeft < middleIndex && indexRight < endIndex) {
             int numberLeft = this.numbers[indexLeft];
             int numberRight = this.numbers[indexRight];
 
             if (numberLeft < numberRight) {
-                buffer[indexMerged] = numberLeft;
+                buffer[indexBuffer] = numberLeft;
                 indexLeft += 1;
             } else {
-                buffer[indexMerged] = numberRight;
+                buffer[indexBuffer] = numberRight;
                 indexRight += 1;
             }
-            indexMerged += 1;
+            indexBuffer += 1;
         }
 
         while (indexLeft < middleIndex) {
-            buffer[indexMerged] = this.numbers[indexLeft];
-            indexMerged += 1;
+            buffer[indexBuffer] = this.numbers[indexLeft];
+            indexBuffer += 1;
             indexLeft += 1;
         }
 
         while (indexRight < endIndex) {
-            buffer[indexMerged] = this.numbers[indexRight];
-            indexMerged += 1;
+            buffer[indexBuffer] = this.numbers[indexRight];
+            indexBuffer += 1;
             indexRight += 1;
         }
 
