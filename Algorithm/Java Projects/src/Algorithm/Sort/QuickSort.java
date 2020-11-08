@@ -9,10 +9,10 @@ public class QuickSort extends Sort {
         int pivot = this.numbers[startIndex];
 
         int findBiggerIndex = startIndex + 1;
-        int findSmallerIndex = endIndex;
+        int findSmallerIndex = endIndex - 1;
 
         while (findBiggerIndex <= findSmallerIndex) {
-            while (findBiggerIndex <= endIndex && this.numbers[findBiggerIndex] <= pivot) {
+            while (findBiggerIndex < endIndex && this.numbers[findBiggerIndex] <= pivot) {
                 findBiggerIndex += 1;
             }
 
@@ -30,12 +30,12 @@ public class QuickSort extends Sort {
             }
         }
 
-        quickSort(startIndex, findSmallerIndex - 1);
+        quickSort(startIndex, findSmallerIndex);
         quickSort(findSmallerIndex + 1, endIndex);
     }
 
     @Override
     public void sort() {
-        quickSort(0, this.numbers.length-1);
+        quickSort(0, this.numbers.length);
     }
 }
